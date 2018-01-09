@@ -31,3 +31,5 @@ E:\TryGame\TryGame\obj\Debug\TryGame.csproj.CoreCompileInputs.cache
 E:\TryGame\TryGame\obj\Debug\TryGame.exe
 E:\TryGame\TryGame\obj\Debug\TryGame.pdb
 E:\TryGame\TryGame\bin\Debug\TryGame.pdb
+E:\TryGame\TryGame\bin\Debug\Ab3d.Reader3ds.dll
+E:\TryGame\TryGame\bin\Debug\Ab3d.Reader3ds.xml

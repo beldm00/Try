@@ -15,6 +15,12 @@ using System.Windows.Shapes;
 
 namespace TryGame
 {
+
+
+
+
+
+
     /// <summary>
     /// Логика взаимодействия для Window1.xaml
     /// </summary>
@@ -22,11 +28,19 @@ namespace TryGame
     {
         string resultsPath = "results.txt";
 
+
+
+
+
+
         public Window1()
         {
             InitializeComponent();
             random = new Random();
             rightAnswer = random.Next(0, 3);
+
+
+
         }
 
 

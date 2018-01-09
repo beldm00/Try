@@ -22,12 +22,27 @@ namespace TryGame
     /// </summary>
     public partial class MainWindow : Window
     {
+        Ab3d.Reader3ds _myReader3ds;
         string resultsPath = "results.txt";
         Window childWindow = new Window1();
         public MainWindow()
         {
             InitializeComponent();
             SoundManager.getInstance().Play();
+
+            _myReader3ds = new Ab3d.Reader3ds();
+            _myReader3ds.ReadFile("N_aperstki.3ds", MyViewport3D);
+
+            _myReader3ds.Animator.GoToFrame(100);
+
+            _myReader3ds.Animator.AutoRepeat = true;
+            _myReader3ds.Animator.AnimationDuration = TimeSpan.FromSeconds(5);
+            CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering); 
+
+        }
+        void CompositionTarget_Rendering(object sender, EventArgs e)
+        {
+            _myReader3ds.Animator.DoAnimate();
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
