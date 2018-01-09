@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Проекты\Универ\2017\Белый 2 курс\TryGame\obj\Debug\
+D:\Проекты\Универ\2017\Белый 2 курс\TryGame\obj\Release\
 TryGame
 none
 false
-DEBUG;TRACE
+TRACE
 D:\Проекты\Универ\2017\Белый 2 курс\TryGame\App.xaml
 2462529049
 
-111351318275
-15983941717
+71138114727
+14-1787462521
 MainWindow.xaml;Window1.xaml;
 
 True
