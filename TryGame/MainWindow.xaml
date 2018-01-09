@@ -1,0 +1,17 @@
+﻿<Window x:Class="TryGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TryGame"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" Closing="Window_Closing">
+    <Grid>
+        <Button x:Name="PlayButton" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50" Click="PlayButton_Click">
+            <Label>Играть</Label>
+        </Button>
+        <Button x:Name="Statistika" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,-50" Click="Statistika_Click">
+            <Label>Статистика</Label>
+        </Button>
+    </Grid>
+</Window>
