@@ -17,7 +17,8 @@ namespace TryGame
         }
         System.Media.SoundPlayer sp;
         private SoundManager()
-        {
+        {            
+            //REVIEW: Название файла - в настройки
             soundName = "backgroundSound.wav";
         }
         string soundName;

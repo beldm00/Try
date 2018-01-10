@@ -23,6 +23,7 @@ namespace TryGame
     public partial class MainWindow : Window
     {
         Ab3d.Reader3ds _myReader3ds;
+        //REVIEW: Файл - в конфиг
         string resultsPath = "results.txt";
         Window childWindow = new Window1();
         public MainWindow()
@@ -31,6 +32,8 @@ namespace TryGame
             SoundManager.getInstance().Play();
 
             _myReader3ds = new Ab3d.Reader3ds();
+
+            //REVIEW: Название файла - в настройки
             _myReader3ds.ReadFile("N_aperstki.3ds", MyViewport3D);
 
             _myReader3ds.Animator.GoToFrame(100);
@@ -45,6 +48,7 @@ namespace TryGame
             _myReader3ds.Animator.DoAnimate();
         }
 
+        //REVIEW: Все клики - в команды во вьюмодель
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
             childWindow.Show();

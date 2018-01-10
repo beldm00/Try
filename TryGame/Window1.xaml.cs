@@ -26,6 +26,7 @@ namespace TryGame
     /// </summary>
     public partial class Window1 : Window
     {
+        //REVIEW: Название файла - в настройки
         string resultsPath = "results.txt";
 
 
@@ -48,6 +49,7 @@ namespace TryGame
         private int rightAnswer;
         private bool isClose = false;
 
+        //REVIEW: Все клики - в команды во вьюмодель
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             File.AppendAllLines(resultsPath, new string[] { rightAnswer == 0 ? "1" : "0" });
@@ -76,6 +78,7 @@ namespace TryGame
             }
         }
 
+        //REVIEW: Зачем скрывать существующий метод Close()? Велосипедирование?
         public void Close()
         {
             isClose = true;
