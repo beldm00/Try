@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,8 @@ namespace TryGame
         System.Media.SoundPlayer sp;
         private SoundManager()
         {            
-            //REVIEW: Название файла - в настройки
-            soundName = "backgroundSound.wav";
+
+            soundName = ConfigurationSettings.AppSettings["SoundFileName"];
         }
         string soundName;
         public void Play()

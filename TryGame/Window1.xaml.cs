@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -26,8 +27,8 @@ namespace TryGame
     /// </summary>
     public partial class Window1 : Window
     {
-        //REVIEW: Название файла - в настройки
-        string resultsPath = "results.txt";
+  
+        string resultsPath = ConfigurationSettings.AppSettings["ResultFileName"];
 
 
 
