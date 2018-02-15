@@ -20,13 +20,13 @@ namespace TryGame
 {
     class ViewModel
     {
-        public Ab3d.Reader3ds _myReader3ds;
+        //public Ab3d.Reader3ds _myReader3ds;
 
         string resultsPath = ConfigurationSettings.AppSettings["ResultFileName"];
-        public Window childWindow = new Window1();
+        public Window1 childWindow;
 
         public void Initilize(Viewport3D MyViewport3D)
-        {
+        {/*
             _myReader3ds = new Ab3d.Reader3ds();
 
 
@@ -35,7 +35,12 @@ namespace TryGame
             _myReader3ds.Animator.GoToFrame(100);
 
             _myReader3ds.Animator.AutoRepeat = true;
-            _myReader3ds.Animator.AnimationDuration = TimeSpan.FromSeconds(5);
+            _myReader3ds.Animator.AnimationDuration = TimeSpan.FromSeconds(5);*/
+        }
+
+        public void Load()
+        {
+            childWindow = new Window1();
         }
 
         public void PlayButton_Click()

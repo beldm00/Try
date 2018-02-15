@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Window1" Height="300" Width="300" Closing="Window_Closing">
     <Grid>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,100">Попробуй выбери правильный ответ:</TextBlock>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,100" Text="{Binding Path=ResultText}"/>
         <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,150,-100" Click="Button_Click">
             <Label>1</Label>
         </Button>

@@ -27,42 +27,26 @@ namespace TryGame
     /// </summary>
     public partial class Window1 : Window
     {
-  
-        string resultsPath = ConfigurationSettings.AppSettings["ResultFileName"];
-
-
-
-
-
-
+        private ViewModel1 _VM1;
+        
         public Window1()
         {
             InitializeComponent();
-            random = new Random();
-            rightAnswer = random.Next(0, 3);
-
-
-
+            _VM1 = new ViewModel1();
+            this.DataContext = _VM1;
         }
 
-
-        private Random random;
-        private int rightAnswer;
         private bool isClose = false;
 
         //REVIEW: Все клики - в команды во вьюмодель
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            File.AppendAllLines(resultsPath, new string[] { rightAnswer == 0 ? "1" : "0" });
-            textBlock.Text = rightAnswer == 0 ? "Поздравляю с победой. Попробуй еще." : "Проиграл. Не унывай. Попробуй еще.";
-            rightAnswer = random.Next(0, 3);
+            _VM1.Result_Button_Click(1);
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            File.AppendAllLines(resultsPath, new string[] { rightAnswer == 1 ? "1" : "0" });
-            textBlock.Text = rightAnswer == 1 ? "Поздравляю с победой. Попробуй еще." : "Проиграл. Не унывай. Попробуй еще.";
-            rightAnswer = random.Next(0, 3);
+            _VM1.Result_Button_Click(2);
         }
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
@@ -79,18 +63,9 @@ namespace TryGame
             }
         }
 
-        //REVIEW: Зачем скрывать существующий метод Close()? Велосипедирование?
-        public void Close()
-        {
-            isClose = true;
-            this.Close();
-        }
-
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            File.AppendAllLines(resultsPath, new string[] { rightAnswer == 2 ? "1" : "0" });
-            textBlock.Text = rightAnswer == 2 ? "Поздравляю с победой. Попробуй еще." : "Проиграл. Не унывай. Попробуй еще.";
-            rightAnswer = random.Next(0, 3);
+            _VM1.Result_Button_Click(3);
         }
     }
 }

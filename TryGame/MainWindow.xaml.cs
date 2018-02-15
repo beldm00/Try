@@ -35,7 +35,7 @@ namespace TryGame
         }
         void CompositionTarget_Rendering(object sender, EventArgs e)
         {
-            _VM._myReader3ds.Animator.DoAnimate();
+            //_VM._myReader3ds.Animator.DoAnimate();
         }
 
         private void PlayButton_Click(object sender, RoutedEventArgs e)
@@ -52,6 +52,11 @@ namespace TryGame
         {
             SoundManager.getInstance().Close();
             _VM.childWindow.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            _VM.Load();
         }
     }
 }
