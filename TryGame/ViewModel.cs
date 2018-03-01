@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Configuration;
 using System.IO;
+using TryGame;
 
 namespace TryGame
 {
@@ -24,7 +25,15 @@ namespace TryGame
 
         string resultsPath = ConfigurationSettings.AppSettings["ResultFileName"];
         public Window1 childWindow;
+        private ICommand _PlayButton;
+        private ICommand _Statistik;
 
+        public ViewModel()
+        {
+
+            _PlayButton = new Command(PlayButton_Action);
+            _Statistik = new Command(Statistik_Action);
+        }
         public void Initilize(Viewport3D MyViewport3D)
         {/*
             _myReader3ds = new Ab3d.Reader3ds();
@@ -43,12 +52,22 @@ namespace TryGame
             childWindow = new Window1();
         }
 
-        public void PlayButton_Click()
+        public void PlayButton_Action()
         {
             childWindow.Show();
         }
 
-        public void Statistika_Click()
+        public ICommand PlayButton
+        {
+            get { return _PlayButton; }
+        }
+
+        public ICommand Statistik
+        {
+            get { return _Statistik; }
+        }
+
+        public void Statistik_Action()
         {
             string[] results = File.Exists(resultsPath) ? File.ReadAllLines(resultsPath) : new string[0];
             string message = string.Format("Кол-во побед: {0}{1}Кол-во поражений:{2}", results.Where(x => x.Equals("1")).Count(), Environment.NewLine, results.Where(x => x.Equals("0")).Count());

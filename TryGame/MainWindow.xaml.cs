@@ -23,11 +23,13 @@ namespace TryGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ViewModel _VM = new ViewModel();
+        private ViewModel _VM;
         public MainWindow()
         {
             InitializeComponent();
+            _VM = new ViewModel();
             SoundManager.getInstance().Play();
+            this.DataContext = _VM;
             //_VM.Initilize(MyViewport3D);
 
             //CompositionTarget.Rendering += new EventHandler(CompositionTarget_Rendering); 
@@ -37,16 +39,16 @@ namespace TryGame
         {
             //_VM._myReader3ds.Animator.DoAnimate();
         }
-
+        /*
         private void PlayButton_Click(object sender, RoutedEventArgs e)
         {
-            _VM.PlayButton_Click();
-        }
-
-        private void Statistika_Click(object sender, RoutedEventArgs e)
+            _VM.PlayButton.Execute(sender);
+        }*/
+        
+        /*private void Statistika_Click(object sender, RoutedEventArgs e)
         {
             _VM.Statistika_Click();
-        }
+        }*/
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {

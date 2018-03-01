@@ -19,12 +19,14 @@
 
 
         </Grid>
-        
-        
-        <Grid Grid.Row="1">     <Button x:Name="PlayButton" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50" Click="PlayButton_Click">
+
+
+        <Grid Grid.Row="1">
+            <Button x:Name="PlayButton" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,50" Command="{Binding PlayButton}">
             <Label>Играть</Label>
         </Button>
-        <Button x:Name="Statistika" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,-50" Click="Statistika_Click">
+            <Button x:Name="Statistika"
+                    VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,0,-50" Command="{Binding Statistik}">
             <Label>Статистика</Label>
         </Button>
         </Grid>

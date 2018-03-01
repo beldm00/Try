@@ -60,6 +60,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="commands.cs" />
+    <Compile Include="CommandWithParameters.cs" />
     <Compile Include="SoundManager.cs" />
     <Compile Include="ViewModel.cs" />
     <Compile Include="ViewModel1.cs" />

@@ -37,7 +37,7 @@ namespace TryGame
         }
 
         private bool isClose = false;
-
+        /*
         //REVIEW: Все клики - в команды во вьюмодель
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -47,12 +47,7 @@ namespace TryGame
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             _VM1.Result_Button_Click(2);
-        }
-
-        private void Button_Click_2(object sender, RoutedEventArgs e)
-        {
-            this.Hide();
-        }
+        }*/
 
         private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
@@ -62,10 +57,10 @@ namespace TryGame
                 e.Cancel = true;
             }
         }
-
+        /*
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
             _VM1.Result_Button_Click(3);
-        }
+        }*/
     }
 }

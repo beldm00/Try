@@ -8,17 +8,14 @@
         Title="Window1" Height="300" Width="300" Closing="Window_Closing">
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,100" Text="{Binding Path=ResultText}"/>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,150,-100" Click="Button_Click">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,150,-100"  Command="{Binding button1}"  CommandParameter="1">
             <Label>1</Label>
         </Button>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-100" Click="Button_Click_1">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,-100" Command="{Binding button2}"  CommandParameter="2">
             <Label>2</Label>
         </Button>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-150,-100" Click="Button_Click_3">
+        <Button HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,-150,-100" Command="{Binding button3}"  CommandParameter="3">
             <Label>3</Label>
-        </Button>
-        <Button HorizontalAlignment="Center" VerticalAlignment="Bottom" Click="Button_Click_2">
-            <Label>Вернуться назад</Label>
         </Button>
     </Grid>
 </Window>
